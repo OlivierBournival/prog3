@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="btn_Article">Article</string>
+    <string name="btn_Contact">Contact</string>
+</resources>
