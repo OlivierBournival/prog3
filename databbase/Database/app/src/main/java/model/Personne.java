@@ -5,7 +5,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import com.google.type.DateTime;
+import java.util.Date;
+
 @Entity
 public class Personne {
     @PrimaryKey(autoGenerate = true)
@@ -13,7 +14,7 @@ public class Personne {
     @ColumnInfo
     public String nom;
     @ColumnInfo
-    public DateTime dateDeNaissance;
+    public Date dateDeNaissance;
 
     public enum JourPlus { M, F, Other }
 
