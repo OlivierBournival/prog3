@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="page du cours professions informatiques">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+        <title>Service et modèle</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {padding-top: 70px;}
+            pre span {color:red;}
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand fixed-top navbar-light bg-dark" >
+            <div class="container">
+                <a class="navbar-brand text-light" href="#">Programmation 3</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="theCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a class="btn btn-outline-light ml-1" role="button" href="index.html" ><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+		    <div class="row">
+                <h3 id="s2">Semaine 12 : Modèle (entités) et service (actions)</h3>
+            </div>
+            <div class="row">
+				<div class="col-md-5">
+					<div class="card text-white bg-danger mb-3">
+						<div class="card-header">
+							Avant la séance (2h)
+						</div>
+						<div class="card-body">
+							<p>
+                                Regarder la video qui décrit comment concevoir une application en fonction :
+
+							</p>
+							<ul>
+								<li>des entités à représenter</li>
+								<li>des actions à fournir à l'utilisateur</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card text-white bg-dark mb-3">
+						<div class="card-header"> Vidéos</div>
+						<div class="card-body">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://youtube.com/embed/MmpgnWLEa5s?rel=0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-7">
+					<div class="card text-white bg-dark mb-3">
+						<div class="card-header">
+							Contenu
+						</div>
+						<div class="card-body">
+							Nous allons voir comment appliquer la décomposition en entités (modèle) et actions (service)
+							sur l'exemple suivant:
+
+							<br><br>
+							<p style="font-size: .9em;">
+								On veut une application qui permet d'aller chercher l'avis de personnes sur des films,
+								des disques, un peu de tout. On veut pouvoir ajouter un item dans l'appli pour pouvoir
+								entrer les avis des gens. On peut voir la liste de tous les items et pour chaque item,
+								on veut pouvoir ajouter une évaluation (une note entre 0 et 5) ainsi que le nom de la
+								personne.
+								On veut aussi calculer des statistiques comme la moyenne des notes pour un item,
+								l'écart-type ou encore le nombre de personnes ayant donné la note de 0, 1, 2, 3, 4 ou 5.
+							</p>
+							<br>
+							<p>
+								On s'arrêtera aux signatures des méthodes d'action et aux classes de modèle.
+							</p>
+						</div>
+					</div>
+                    <div class="card text-white bg-primary mb-3">
+						<div class="card-header">
+							À faire
+						</div>
+						<div class="card-body">
+							<ul>
+								<li>Compléter l'exercice de la semaine</li>
+							</ul>
+						
+					   </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+						
+				</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <h2><span class="btn btn-dark btn-lg btn-block mt-5">Exercices de la semaine</span></h2>
+						<div>
+                            <h3>Exercice Notes</h3>
+							<p>
+								Vous devez appliquer la même méthode de décomposition en entités et actions sur l'exemple suivant:
+							</p>
+
+							<p>
+								On cherche à réaliser une application permettant de gérer des étudiants et leurs notes. L'application permet de créer des épreuves avec une pondération. L'ensemble des épreuves donne une somme de poids de 100. On peut créer des étudiants dans le système. Finalement, on peut saisir les notes pour un étudiant et pour une épreuve.
+							</p>
+							<p>
+								Après la saisie de chaque nouvelle note d'étudiant, le système donne le détail de la situation de l'étudiant.
+							</p>
+							<p>
+								Prends l'exemple suivant pour votre application. Tu dois définir le modèle de données ainsi que le service sous la forme des méthodes nécessaires.
+							</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<br/>
+<!--
+			<a class="btn btn-primary btn-me" href="imperatif.html" style="margin-right:70%">Semaine précédente</a> 
+			<a class="btn btn-primary btn-me" href="revision.html">Semaine suivante</a> 
+-->
+			<br/>
+			<br/>
+        </div>
+        <!-- /container -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>

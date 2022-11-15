@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="page du cours professions informatiques">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+        <title>Librairies</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {padding-top: 70px;}
+            pre span {color:red;}
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand fixed-top navbar-light bg-dark" >
+            <div class="container">
+                <a class="navbar-brand text-light" href="#">Programmation 3</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="theCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a class="btn btn-outline-light ml-1" role="button" href="index.html" ><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+		    <div class="row">
+                <h3 id="s2">Semaine 5 : Librairies Java tierces</h3>
+            </div>
+            <div class="row">
+				<div class="col-md-4">
+					<div class="card text-white bg-danger mb-3">
+						<div class="card-header">
+							Avant la séance (2h)
+						</div>
+						<div class="card-body">
+							<p>
+                                Il existe des milliers de librairies Java pour faire presque tout qui fonctionnent généralement bien. De nombreuses compagnies tech comme Google Twitter ou Square partagent leur librairies.
+							</p> 
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-white bg-dark mb-3">
+						<div class="card-header"> Vidéos</div>
+						<div class="card-body">
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-white bg-dark mb-3">
+						<div class="card-header">
+							Contenu
+						</div>
+						<div class="card-body">
+							<ul>
+								<li>Demo de Maven Repository: librairie, version et pom.xml</li>
+								<li>Exemple de recherche de librairie : exemple de https://square.github.io </li>
+							</ul>
+						</div>
+					</div>
+                    <div class="card text-white bg-primary mb-3">
+						<div class="card-header">
+							À faire
+						</div>
+						<div class="card-body">
+							<ul>
+								<li>Compléter les exercices de la semaine</li>
+								<li>Continuer le 
+								<a class="btn btn-dark btn-sm" href="phase1.html">premier travail</a>
+								</li>
+							</ul>
+						
+					   </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+						
+				</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <h2><span class="btn btn-dark btn-lg btn-block mt-5">Exercices de la semaine</span></h2>
+						<div>
+
+                            <h3>Exercice Jsoup</h3>
+                            <p>
+                                Vous devez écrire un petit programme qui prend une url en paramètre, qui télécharge la page web correspondant, puis qui extrait toutes les balises <em>a</em> de la page et affiche leur attribut href.
+                            </p>
+                            <p>
+                                Par exemple, si la page contient
+                            </p>
+                            <pre>&lt;a href="pipo.html"&gt;test&lt;/a&gt;</pre>
+                            <p>
+                                le programme devra afficher <em>test = pipo.html</em> dans la console.
+                            </p>
+                            <h3>Exercice Validation d'un courriel valide</h3>
+                            <p>
+                                Petite recherche, tu dois trouver une librairie qui valide si un courriel est valide. Écris un petit programme avec un <em>main</em> pour voir si la méthode fournie par la librairie fonctionne sur les exemples suivants:
+                            </p>
+                            <ul>
+                                <li>Ok : jo@pipo.org</li>
+                                <li>Ok : ma_mu@m.ca</li>
+                                <li>Ok : a.a@a.aa</li>
+                                <li>Ko : ab@ab</li>
+                                <li>Ko : a.b@ab</li>
+                                <li>Ko : jo</li>
+                            </ul>
+
+                            <h3>Exercice ArrayList LinkedList et GapList (externe)</h3>
+                            On vent comparer les performances de plusieurs implémentations de <em>List</em> quand on
+                            parle de performance pour l'insertion.
+
+                            <p>
+                                On souhaite comparer le temps d'exécution nécessaire pour:
+                            </p>
+                            <ul>
+                                <li>ajouter 1000 éléments en dernière position dans la liste</li>
+                                <li>ajouter 1000 éléments en première position dans la liste</li>
+                                <li>ajouter 1000 éléments dans une position au hasard dans la liste</li>
+                            </ul>
+                            <p>
+                                Pour permettre de tester plusieurs listes, on vous recommande de créer une méthode
+                            </p>
+                            <pre>
+    void testeCetteListe(List&lt;Integer&gt; liste){
+        Random random = new Random(1234);
+        long a = System.currentTimeMillis();
+        // ajouter 1000 element en dernière position liste.add(nombre);
+        long b = System.currentTimeMillis();
+        // ajouter 1000 element en première position liste.add(0, nombre);
+        long c = System.currentTimeMillis();
+        // ajouter 1000 element position au hasard liste.add(random.nextInt(liste.size()), nombre);
+        long d = System.currentTimeMillis();
+        // afficher b-a, c-b, d-c qui sont les durées d'exécution en millisecondes
+    }
+</pre>
+                            <p>
+                                Le but est de voir quelle liste est la plus performante entre LinkedList, ArrayList et
+                                une dernière que vous trouverez dans la librairie suivante
+                                <a href="http://www.magicwerk.org/page-collections-download.html">GapList</a>.
+                            </p>
+                            <p>
+                                Du coup avec un <em>main</em> qui appelle la méthode testeCetteListe pour une
+                                LinkedList puis une ArrayList puis une GapList, vous aurez une bonne idée des
+                                performances respectives.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<br/>
+<!--
+			<a class="btn btn-primary btn-me" href="imperatif.html" style="margin-right:70%">Semaine précédente</a> 
+			<a class="btn btn-primary btn-me" href="revision.html">Semaine suivante</a> 
+-->
+			<br/>
+			<br/>
+        </div>
+        <!-- /container -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>
